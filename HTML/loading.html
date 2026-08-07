@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 3 seconds baad index.html open hoga -->
+    <meta http-equiv="refresh" content="3;url=index.html">
+
+    <title>Loading...</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#f8f5f2;
+        }
+
+        .container{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:20px;
+        }
+
+        /* Logo + Text */
+        .brand{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:12px;
+        }
+
+        .logo-img{
+            width:80px;
+            height:80px;
+            object-fit:contain;
+        }
+
+        .logo-text{
+            font-size:35px;
+            font-weight:bold;
+            color:#c1440E;
+            line-height:1;
+        }
+
+        h2{
+            color:#555;
+            font-size:22px;
+            font-weight:500;
+        }
+
+        .loader{
+            width:350px;
+            height:12px;
+            background:#ddd;
+            border-radius:20px;
+            overflow:hidden;
+        }
+
+        .progress{
+            width:0%;
+            height:100%;
+            background:linear-gradient(to right,#c1440E,#D4A373);
+            animation:load 3s linear forwards;
+        }
+
+        @keyframes load{
+            from{
+                width:0%;
+            }
+            to{
+                width:100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Logo and Name -->
+        <div class="brand">
+            <img src="../images/logo.png" class="logo-img" alt="JobHub Logo">
+            <div class="logo-text">JobHub</div>
+        </div>
+
+        <h2>Loading...</h2>
+
+        <div class="loader">
+            <div class="progress"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>
