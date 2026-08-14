@@ -2,142 +2,208 @@
 <html lang="en">
 
 <head>
-  <link rel="icon" href="images/logo.png">
-<meta charset="UTF-8">
-<title>JobHub — Connecting Talent with Opportunity</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="..\CSS\index.css">
-
+  <meta charset="UTF-8">
+  <title>JobHub — Connecting Talent with Opportunity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../images/logo.png">
+  <link rel="stylesheet" href="../CSS/index.css">
 </head>
+
 <body>
-  <div class="bg-image"></div>
-<nav class="site-nav">
-  <div class="container">
-    <a href="index.html" class="logo">
-    <span class="logo-mark">
-        <img src="..\images\logo.png" alt="JobHub Logo" class="logo-img">
-    </span>
-    <span class="logo-text">JobHub</span>
-</a>
-      
-    <ul class="nav-links">
-      <li><a href="#">Find Jobs</a></li>
-      <li><a href="#">Companies</a></li>
-      <li><a href="#">Salary Guide</a></li>
-      <li><a href="#">Company Reviews</a></li>
-      <li><a href="#">Career Advice</a></li>
-    </ul>
-    <div class="nav-actions">
-      <a href="#" class="login-btn">Login</a>
-      <a href="#role" class="btn btn-primary btn-sm">Sign Up</a>
-    </div>
-  </div>
-</nav>
 
-<section class="search-band">
-  <div class="container">
-    <div class="home-search" > 
-      <label class="field">
-        🔍
-        <input type="text" placeholder="Job title, keywords, or company">
-      </label>
-      
-      <label class="field">
-        📍
-        <input type="text" placeholder='City, location, or "remote"'>
-      </label>
-      <button type="submit" class="btn btn-primary">Find Jobs</button>
-    
-  </div>
-</section>
+  <!-- Hidden checkbox that drives Light/Dark mode — pure CSS, no JS -->
+  <input type="checkbox" id="themeToggle" class="theme-toggle-checkbox">
 
-<header class="brand-moment">
-  <div class="container">
-    <div class="brand-lockup">
-       <span class="logo-mark-2">
-        <img src="..\images\logo.png" alt="JobHub Logo" class="logo-img-2">
-    </span>
-      <span class="brand-word">Job<span class="hub">Hub</span></span>
-    </div>
-    <h1>Your next role starts here</h1>
-    <p class="tagline">Connecting Talent with Opportunity. Choose your role below to get a personalised experience.</p>
-  </div>
-</header>
+  <div class="page-wrapper">
 
-<section class="role-section" id="role">
-  <div class="container">
-    <div class="role-grid">
-      <div class="card role-card">
-        <!-- <div class="role-icon seeker">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="white" stroke-width="1.8"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="white" stroke-width="1.8"/></svg>
-        </div> -->
-        <p class="role-label">I am a</p>
-        <h3>Job Seeker</h3>
-        <p class="role-desc">Search roles, track applications, and get matched with jobs that fit you.</p>
-        <a href="index.html" class="btn btn-primary btn-block">Continue</a>
-      </div>
-      <div class="card role-card">
-        <!-- <div class="role-icon recruiter">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3.4" stroke="white" stroke-width="1.8"/><path d="M3 20c0-3.4 2.8-5.2 6-5.2s6 1.8 6 5.2" stroke="white" stroke-width="1.8"/><path d="M16 8.4a3 3 0 1 1 3 3" stroke="white" stroke-width="1.8"/><path d="M15 20c.3-2.7 2-4.6 4.4-5" stroke="white" stroke-width="1.8"/></svg>
-        </div> -->
-        <p class="role-label">I am a</p>
-        <h3>Recruiter</h3>
-        <p class="role-desc">Post jobs, manage applicants, and find qualified candidates faster.</p>
-        <a href="onboarding.html#rc-1" class="btn btn-primary btn-block">Continue</a>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <nav class="site-nav">
+      <div class="container nav-container">
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
         <a href="index.html" class="logo">
           <span class="logo-mark">
-        <img src="..\images\logo.png" alt="JobHub Logo" class="logo-img">
-    </span>
-          JobHub
+            <img src="../images/logo.png" alt="JobHub Logo" class="logo-img">
+          </span>
+          <span class="logo-text">JobHub</span>
         </a>
-        <p>Connecting talented individuals with the right opportunities, and helping companies build great teams.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="Instagram">ig</a>
-          <a href="#" aria-label="Twitter">tw</a>
-          <a href="#" aria-label="Facebook">fb</a>
-        </div>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
+
+        <!-- Mobile nav links (revealed by hamburger) -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="#">Find Jobs</a></li>
+          <li><a href="#">Companies</a></li>
           <li><a href="#">Salary Guide</a></li>
           <li><a href="#">Company Reviews</a></li>
           <li><a href="#">Career Advice</a></li>
-          <li><a href="#">Privacy Policy</a></li>
         </ul>
+
+        <div class="nav-right">
+
+          <!-- Theme toggle icon (label linked to the checkbox above) -->
+          <label for="themeToggle" class="icon-btn theme-label" aria-label="Toggle light or dark mode">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </label>
+
+          <!-- Profile dropdown — pure CSS checkbox trick -->
+          <div class="profile-wrap">
+            <input type="checkbox" id="profileToggle" class="profile-toggle-checkbox">
+            <label for="profileToggle" class="icon-btn profile-toggle" aria-label="Account menu">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </label>
+
+            <div class="profile-menu">
+              <p class="profile-menu-title">Welcome to JobHub</p>
+              <a href="#" class="btn btn-outline btn-block btn-sm">Login</a>
+              <a href="#" class="btn btn-primary btn-block btn-sm">Sign Up</a>
+              <!--
+                NOTE: "After login, show Profile instead of Login/Signup" needs
+                real auth state (JS or backend session). Not wired up yet —
+                swap this panel's content once login is implemented.
+              -->
+            </div>
+          </div>
+
+          <!-- Hamburger -->
+          <input type="checkbox" id="navToggle" class="nav-toggle-checkbox">
+          <label for="navToggle" class="nav-toggle" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+        </div>
       </div>
-      <div>
-        <h4><a href="index.html">About Us</a></h4>
-        <ul class="footer-contact">
-          <li>We're committed to connecting talented individuals with the right opportunities and helping companies build great teams.</li>
-        </ul>
-        <a href="index.html" class="btn btn-outline btn-sm" style="margin-top:8px; border-color:rgba(255,255,255,0.25); color:#fff;">Read our story</a>
+    </nav>
+
+    <!-- =========================
+         SEARCH BAND
+    ========================== -->
+    <section class="search-band">
+      <div class="container">
+        <form class="home-search">
+          <label class="field">
+            🔍
+            <input type="text" placeholder="Job title, keywords, or company">
+          </label>
+          <label class="field">
+            📍
+            <input type="text" placeholder='City, location, or "remote"'>
+          </label>
+          <button type="submit" class="btn btn-primary">Find Jobs</button>
+        </form>
       </div>
-      <div>
-        <h4><a href="index.html">Contact Us</a></h4>
-        <ul class="footer-contact">
-          <li>✉️ info@jobhub.com</li>
-          <li>📞 +91 98765 43210</li>
-          <li>📍 123, Tech Park, Bangalore, India</li>
-        </ul>
-        <a href="index.html" class="btn btn-outline btn-sm" style="margin-top:8px; border-color:rgba(255,255,255,0.25); color:#fff;">Get in touch</a>
+    </section>
+
+    <!-- =========================
+         BRAND MOMENT
+    ========================== -->
+    <header class="brand-moment">
+      <div class="container">
+        <div class="brand-lockup">
+          <span class="logo-mark-2">
+            <img src="../images/logo.png" alt="JobHub Logo" class="logo-img-2">
+          </span>
+          <span class="brand-word">Job<span class="hub">Hub</span></span>
+        </div>
+        <h1>Your next role starts here</h1>
+        <p class="tagline">Connecting Talent with Opportunity. Choose your role below to get a personalised experience.</p>
       </div>
-    </div>
-    <div class="footer-bottom">© 2026 JobHub. All Rights Reserved.</div>
-  </div>
-</footer>
+    </header>
+
+    <!-- =========================
+         ROLE SELECTION
+    ========================== -->
+    <section class="role-section" id="role">
+      <div class="container">
+        <div class="role-grid">
+
+          <div class="card role-card">
+            <p class="role-label">I am a</p>
+            <h3>Job Seeker</h3>
+            <p class="role-desc">Search roles, track applications, and get matched with jobs that fit you.</p>
+            <a href="index.html" class="btn btn-primary btn-block">Continue</a>
+          </div>
+
+          <div class="card role-card">
+            <p class="role-label">I am a</p>
+            <h3>Recruiter</h3>
+            <p class="role-desc">Post jobs, manage applicants, and find qualified candidates faster.</p>
+            <a href="onboarding.html#rc-1" class="btn btn-primary btn-block">Continue</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
+              <span class="logo-mark">
+                <img src="../images/logo.png" alt="JobHub Logo" class="logo-img">
+              </span>
+              JobHub
+            </a>
+            <p>Connecting talented individuals with the right opportunities, and helping companies build great teams.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="LinkedIn">in</a>
+              <a href="#" aria-label="Instagram">ig</a>
+              <a href="#" aria-label="Twitter">tw</a>
+              <a href="#" aria-label="Facebook">fb</a>
+            </div>
+          </div>
+
+          <div>
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">Find Jobs</a></li>
+              <li><a href="#">Salary Guide</a></li>
+              <li><a href="#">Company Reviews</a></li>
+              <li><a href="#">Career Advice</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4><a href="index.html">About Us</a></h4>
+            <ul class="footer-contact">
+              <li>We're committed to connecting talented individuals with the right opportunities and helping companies build great teams.</li>
+            </ul>
+            <a href="index.html" class="btn btn-outline btn-sm footer-link-btn">Read our story</a>
+          </div>
+
+          <div>
+            <h4><a href="index.html">Contact Us</a></h4>
+            <ul class="footer-contact">
+              <li>✉️ info@jobhub.com</li>
+              <li>📞 +91 98765 43210</li>
+              <li>📍 123, Tech Park, Bangalore, India</li>
+            </ul>
+            <a href="index.html" class="btn btn-outline btn-sm footer-link-btn">Get in touch</a>
+          </div>
+
+        </div>
+        <div class="footer-bottom">© 2026 JobHub. All Rights Reserved.</div>
+      </div>
+    </footer>
+
+  </div><!-- /.page-wrapper -->
 
 </body>
 </html>
