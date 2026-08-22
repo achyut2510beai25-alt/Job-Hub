@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Company Reviews — JobHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../images/logo.png">
+  <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+  <input type="checkbox" id="themeToggle" class="theme-toggle-checkbox">
+  <div class="page-wrapper">
+    
+    <!-- HEADER NAVBAR -->
+    <nav class="site-nav">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <span class="logo-mark"><img src="../images/logo.png" alt="JobHub" class="logo-img"></span>
+          <span class="logo-text">JobHub</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="find-jobs.html">Find Jobs</a></li>
+  <li><a href="company-reviews.html" class="active">Company Reviews</a></li>
+  <li><a href="salary-guide.html">Salary Guide</a></li>
+  <li><a href="subscription.html">Upgrade</a></li>
+</ul>
+
+        <div class="nav-right">
+          <!-- Theme Toggle Button -->
+          <label for="themeToggle" class="icon-btn theme-label" aria-label="Toggle theme">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8"/></svg>
+          </label>
+
+          <!-- Account Profile Menu -->
+          <div class="profile-wrap">
+            <input type="checkbox" id="profileToggle" class="profile-toggle-checkbox">
+            <label for="profileToggle" class="icon-btn profile-toggle" aria-label="Account menu">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.8"/></svg>
+            </label>
+            <div class="profile-menu">
+              <p class="profile-menu-title">Welcome to JobHub</p>
+              <a href="login.html" class="btn btn-outline btn-block btn-sm">Log In</a>
+              <a href="signup.html" class="btn btn-primary btn-block btn-sm">Sign Up</a>
+            </div>
+          </div>
+
+          <!-- Mobile Hamburger Toggle -->
+          <input type="checkbox" id="navToggle" class="nav-toggle-checkbox">
+          <label for="navToggle" class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO & SEARCH BAR -->
+    <header class="page-hero">
+      <div class="container">
+        <h1>Authentic Employer Reviews</h1>
+        <p>Unfiltered insights on work culture, compensation, leadership, and balance.</p>
+        
+        <div class="search-band" style="margin-top: 20px;">
+          <div class="home-search">
+            <div class="field">
+              <span>🏢</span>
+              <input type="text" placeholder="Company name or industry">
+            </div>
+            <button class="btn btn-primary">Search Reviews</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN REVIEWS SECTION -->
+    <main class="container">
+      <div class="review-grid">
+        
+        <div class="review-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+            <div>
+              <h3 style="margin-bottom: 2px;">TechFlow Inc.</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem;">Software &amp; Cloud Solutions</p>
+            </div>
+            <span style="font-weight: 700; color: #D97706; background: rgba(217, 119, 6, 0.1); padding: 4px 10px; border-radius: 20px; font-size: 0.85rem;">★ 4.8</span>
+          </div>
+          <p style="margin-bottom: 16px;">"Exceptional work-life balance, high trust from leadership, and generous remote work stipends. Promotion tracks are transparent."</p>
+          <div style="font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 10px;">Verified Senior Developer • Jan 2026</div>
+        </div>
+
+        <div class="review-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+            <div>
+              <h3 style="margin-bottom: 2px;">Creative Scale</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem;">Design &amp; Digital Media</p>
+            </div>
+            <span style="font-weight: 700; color: #D97706; background: rgba(217, 119, 6, 0.1); padding: 4px 10px; border-radius: 20px; font-size: 0.85rem;">★ 4.5</span>
+          </div>
+          <p style="margin-bottom: 16px;">"Fast-paced creative energy with very talented peers. Projects move quickly, though crunch periods happen near client launches."</p>
+          <div style="font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 10px;">Verified Product Designer • Feb 2026</div>
+        </div>
+
+        <div class="review-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+            <div>
+              <h3 style="margin-bottom: 2px;">DataPulse Labs</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem;">Data Analytics &amp; AI</p>
+            </div>
+            <span style="font-weight: 700; color: #D97706; background: rgba(217, 119, 6, 0.1); padding: 4px 10px; border-radius: 20px; font-size: 0.85rem;">★ 4.7</span>
+          </div>
+          <p style="margin-bottom: 16px;">"Strong engineering culture with genuine focus on innovation. Competitive pay structure with excellent healthcare benefits."</p>
+          <div style="font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 10px;">Verified Data Scientist • Dec 2025</div>
+        </div>
+
+        <div class="review-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+            <div>
+              <h3 style="margin-bottom: 2px;">CloudNet Systems</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem;">IT Infrastructure</p>
+            </div>
+            <span style="font-weight: 700; color: #D97706; background: rgba(217, 119, 6, 0.1); padding: 4px 10px; border-radius: 20px; font-size: 0.85rem;">★ 4.2</span>
+          </div>
+          <p style="margin-bottom: 16px;">"Solid stability and great learning opportunities for junior staff. Management is reachable, though legacy codebases take time to update."</p>
+          <div style="font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 10px;">Verified DevOps Engineer • Feb 2026</div>
+        </div>
+        <!-- Extra Review Card 1 -->
+        <div class="review-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+            <div>
+              <h3 style="margin-bottom: 2px;">Apex Dynamics</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem;">Fintech &amp; Payments</p>
+            </div>
+            <span style="font-weight: 700; color: #D97706; background: rgba(217, 119, 6, 0.1); padding: 4px 10px; border-radius: 20px; font-size: 0.85rem;">★ 4.6</span>
+          </div>
+          <p style="margin-bottom: 16px;">"Competitive compensation and top-notch tech stack. High expectations during sprint cycles, but bonuses reflect performance."</p>
+          <div style="font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 10px;">Verified Backend Developer • Jan 2026</div>
+        </div>
+
+        <!-- Extra Review Card 2 -->
+        <div class="review-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+            <div>
+              <h3 style="margin-bottom: 2px;">Nexus Media</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem;">E-Commerce &amp; Retail Tech</p>
+            </div>
+            <span style="font-weight: 700; color: #D97706; background: rgba(217, 119, 6, 0.1); padding: 4px 10px; border-radius: 20px; font-size: 0.85rem;">★ 4.4</span>
+          </div>
+          <p style="margin-bottom: 16px;">"Collaborative team environment and flexible working hours. Great medical benefits and quarterly wellness allowances."</p>
+          <div style="font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 10px;">Verified Product Manager • Feb 2026</div>
+        </div>
+
+      </div>
+
+      <!-- CALLOUT CTA -->
+      <div class="about-text-card" style="text-align: center; margin-bottom: 60px;">
+        <h3>Are you a current or former employee?</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin: 8px 0 20px;">Help fellow job seekers make better career decisions by leaving an anonymous review.</p>
+        <button class="btn btn-primary">Write a Review</button>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo"><span class="logo-mark"><img src="../images/logo.png" alt="JobHub" class="logo-img"></span> JobHub</a>
+            <p>Connecting talent with opportunity. Built exclusively to help candidates build meaningful careers.</p>
+          </div>
+          <div>
+            <h4>Job Seekers</h4>
+            <ul>
+              <li><a href="job-search.html">Find Jobs</a></li>
+              <li><a href="salary-guide.html">Salary Guide</a></li>
+              <li><a href="companies.html">Company Reviews</a></li>
+              <li><a href="subscription.html">Upgrade</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>About Us</h4>
+            <p style="font-size: 0.9rem; margin-bottom: 12px;">Learn more about our mission to help job finders worldwide.</p>
+            <a href="about.html" class="btn btn-outline btn-sm footer-link-btn">Read our story</a>
+          </div>
+          <div>
+            <h4>Contact Us</h4>
+            <p style="font-size: 0.9rem; margin-bottom: 12px;">Need help with your application? Reach out to support.</p>
+            <a href="contact.html" class="btn btn-outline btn-sm footer-link-btn">Get in touch</a>
+          </div>
+        </div>
+        <div class="footer-bottom">© 2026 JobHub. All Rights Reserved.</div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

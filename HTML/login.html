@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Log In — JobHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../images/logo.png">
+  <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+  <input type="checkbox" id="themeToggle" class="theme-toggle-checkbox">
+  <div class="page-wrapper">
+    <!-- <nav class="site-nav">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <span class="logo-mark"><img src="../images/logo.png" alt="JobHub" class="logo-img"></span>
+          <span class="logo-text">JobHub</span>
+        </a>
+      </div>
+    </nav> -->
+
+    <section class="auth-section">
+      <div class="container">
+        <div class="auth-wrap">
+          <a href="index.html" class="auth-back">← Back to Home</a>
+          <div class="auth-card">
+            <div class="auth-head">
+              <span class="logo-mark-2"><img src="../images/logo.png" alt="JobHub Logo" class="logo-img-2"></span>
+              <h1>Candidate Login</h1>
+              <p>Log in to manage your applications and search roles</p>
+            </div>
+
+            <form action="index.html" method="GET">
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input class="form-input" type="email" id="email" placeholder="name@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="password">Password</label>
+                <input class="form-input" type="password" id="password" placeholder="••••••••" required minlength="6">
+              </div>
+
+              <!-- Pure CSS Captcha Verification -->
+              <div class="form-group">
+                <label class="form-label">Security Check</label>
+                <div class="captcha-box">
+                  <div class="captcha-visual">
+                    <span>7</span><span>X</span><span>9</span><span>K</span><span>2</span>
+                  </div>
+                  <input class="form-input" type="text" placeholder="Enter code" pattern="7X9K2" title="Please type the 5 characters shown on the left (case-sensitive)" required>
+                </div>
+                <div class="form-hint">Type the characters shown in the security box.</div>
+              </div>
+
+              <div class="form-options-row">
+                <label class="checkbox-row">
+                  <input type="checkbox" name="remember"> Remember me
+                </label>
+                <a href="#" class="forgot-link">Forgot password?</a>
+              </div>
+
+              <button type="submit" class="btn btn-primary auth-submit">Log In to Portal</button>
+            </form>
+
+            <div class="auth-divider">Or</div>
+
+            <div class="auth-switch">
+              Don't have an account? <a href="signup.html">Create free account</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <footer class="site-footer">
+      <div class="container">
+        <div class="footer-bottom">© 2026 JobHub. All Rights Reserved.</div>
+      </div>
+    </footer> -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Candidate Account — JobHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../images/logo.png">
+  <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+  <input type="checkbox" id="themeToggle" class="theme-toggle-checkbox">
+  <div class="page-wrapper">
+    <!-- <nav class="site-nav">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <span class="logo-mark"><img src="../images/logo.png" alt="JobHub" class="logo-img"></span>
+          <span class="logo-text">JobHub</span>
+        </a>
+      </div>
+    </nav> -->
+
+    <section class="auth-section">
+      <div class="container">
+        <div class="auth-wrap">
+          <a href="index.html" class="auth-back">← Back to Home</a>
+          <div class="auth-card">
+            <div class="auth-head">
+              <span class="logo-mark-2"><img src="../images/logo.png" alt="JobHub Logo" class="logo-img-2"></span>
+              <h1>Create Free Account</h1>
+              <p>Start finding your next career milestone today</p>
+            </div>
+
+            <form action="login.html" method="GET">
+              <div class="form-row two-col">
+                <div class="form-group">
+                  <label class="form-label" for="first-name">First Name</label>
+                  <input class="form-input" type="text" id="first-name" placeholder="John" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="last-name">Last Name</label>
+                  <input class="form-input" type="text" id="last-name" placeholder="Doe" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input class="form-input" type="email" id="email" placeholder="john@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number <span class="optional">(Optional)</span></label>
+                <input class="form-input" type="tel" id="phone" placeholder="+1 (555) 000-0000">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="status">Current Status</label>
+                <select class="form-select" id="status" required>
+                  <option value="" disabled selected>Select status...</option>
+                  <option value="actively-looking">Actively Looking for Jobs</option>
+                  <option value="open">Open to Opportunities</option>
+                  <option value="student">Student / Recent Graduate</option>
+                </select>
+              </div>
+              <!-- Upload Resume Field -->
+<div class="form-group">
+  <label for="resumeUpload" class="form-label">Upload Resume (PDF, DOCX)</label>
+  <div class="file-upload-wrapper">
+    <input type="file" id="resumeUpload" class="file-input" accept=".pdf,.doc,.docx" required>
+    <label for="resumeUpload" class="file-label">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="17 8 12 3 7 8"/>
+        <line x1="12" y1="3" x2="12" y2="15"/>
+      </svg>
+      <span>Choose Resume File</span>
+    </label>
+  </div>
+</div>
+
+              <div class="form-group">
+                <label class="form-label" for="pwd">Create Password</label>
+                <input class="form-input" type="password" id="pwd" placeholder="Min. 8 characters" required minlength="8">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="pwd-confirm">Re-enter Password</label>
+                <input class="form-input" type="password" id="pwd-confirm" placeholder="Re-enter password" required minlength="8">
+              </div>
+
+              <!-- Captcha -->
+              <div class="form-group">
+                <label class="form-label">Human Verification</label>
+                <div class="captcha-box">
+                  <div class="captcha-visual">
+                    <span>B</span><span>4</span><span>R</span><span>8</span><span>W</span>
+                  </div>
+                  <input class="form-input" type="text" placeholder="Code" pattern="B4R8W" title="Enter the code shown" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="checkbox-row">
+                  <input type="checkbox" required> I agree to the Candidate Terms of Service and Privacy Policy
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary auth-submit">Create My Profile</button>
+            </form>
+
+            <div class="auth-divider">Or</div>
+
+            <div class="auth-switch">
+              Already have an account? <a href="login.html">Log In</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <footer class="site-footer">
+      <div class="container">
+        <div class="footer-bottom">© 2026 JobHub. All Rights Reserved.</div>
+      </div>
+    </footer> -->
+  </div>
+</body>
+</html>

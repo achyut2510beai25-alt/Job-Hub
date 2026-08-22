@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find Jobs — JobHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../images/logo.png">
+  <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+  <input type="checkbox" id="themeToggle" class="theme-toggle-checkbox">
+  <div class="page-wrapper">
+    
+    <!-- HEADER NAVBAR -->
+    <nav class="site-nav">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <span class="logo-mark"><img src="../images/logo.png" alt="JobHub" class="logo-img"></span>
+          <span class="logo-text">JobHub</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="find-jobs.html" class="active">Find Jobs</a></li>
+  <li><a href="company-reviews.html">Company Reviews</a></li>
+  <li><a href="salary-guide.html">Salary Guide</a></li>
+  <li><a href="subscription.html">Upgrade</a></li>
+</ul>
+
+        <div class="nav-right">
+          <!-- Theme Toggle Button -->
+          <label for="themeToggle" class="icon-btn theme-label" aria-label="Toggle theme">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8"/></svg>
+          </label>
+
+          <!-- Account Profile Menu -->
+          <div class="profile-wrap">
+            <input type="checkbox" id="profileToggle" class="profile-toggle-checkbox">
+            <label for="profileToggle" class="icon-btn profile-toggle" aria-label="Account menu">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.8"/></svg>
+            </label>
+            <div class="profile-menu">
+              <p class="profile-menu-title">Welcome to JobHub</p>
+              <a href="login.html" class="btn btn-outline btn-block btn-sm">Log In</a>
+              <a href="signup.html" class="btn btn-primary btn-block btn-sm">Sign Up</a>
+            </div>
+          </div>
+
+          <!-- Mobile Hamburger Toggle -->
+          <input type="checkbox" id="navToggle" class="nav-toggle-checkbox">
+          <label for="navToggle" class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO & SEARCH BAR -->
+    <header class="page-hero">
+      <div class="container">
+        <h1>Discover Your Next Career</h1>
+        <p>Explore thousands of verified openings across top hiring teams.</p>
+        
+        <div class="search-band" style="margin-top: 20px;">
+          <div class="home-search">
+            <div class="field">
+              <span>🔍</span>
+              <input type="text" placeholder="Job title, skill, or company">
+            </div>
+            <div class="field">
+              <span>📍</span>
+              <input type="text" placeholder="City, state, or 'Remote'">
+            </div>
+            <button class="btn btn-primary">Search Jobs</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN FILTER & CONTENT SECTION -->
+    <div class="container filter-wrapper">
+      
+      <!-- SIDEBAR FILTERS -->
+      <aside class="filter-sidebar">
+        <h3 style="margin-bottom: 20px;">Filter Openings</h3>
+        
+        <div class="filter-group">
+          <h4>Job Type</h4>
+          <label class="filter-checkbox"><input type="checkbox" checked> Full-time</label>
+          <label class="filter-checkbox"><input type="checkbox" checked> Remote</label>
+          <label class="filter-checkbox"><input type="checkbox"> Part-time</label>
+          <label class="filter-checkbox"><input type="checkbox"> Contract</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Experience Level</h4>
+          <label class="filter-checkbox"><input type="checkbox"> Entry Level</label>
+          <label class="filter-checkbox"><input type="checkbox" checked> Mid Level</label>
+          <label class="filter-checkbox"><input type="checkbox"> Senior Level</label>
+          <label class="filter-checkbox"><input type="checkbox"> Director / Executive</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Salary Range</h4>
+          <label class="filter-checkbox"><input type="checkbox"> $60k - $80k</label>
+          <label class="filter-checkbox"><input type="checkbox" checked> $80k - $120k</label>
+          <label class="filter-checkbox"><input type="checkbox"> $120k+</label>
+        </div>
+
+        <button class="btn btn-outline btn-block btn-sm" style="margin-top: 10px;">Reset Filters</button>
+      </aside>
+
+      <!-- JOB FEED LISTINGS -->
+      <main class="job-feed">
+        
+        <div class="job-card">
+          <div>
+            <span class="job-badge">Featured</span>
+            <h3 style="margin: 8px 0 4px;">Senior Frontend Developer</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">TechFlow Inc. • Remote (US/Canada)</p>
+            <p style="margin-top: 12px; font-weight: 700; color: var(--accent);">$120,000 - $145,000 / yr</p>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+          <div>
+            <span class="job-badge">Full-time</span>
+            <h3 style="margin: 8px 0 4px;">UI/UX Product Designer</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Creative Scale • New York, NY</p>
+            <p style="margin-top: 12px; font-weight: 700; color: var(--accent);">$95,000 - $115,000 / yr</p>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+          <div>
+            <span class="job-badge">Remote</span>
+            <h3 style="margin: 8px 0 4px;">Backend Systems Engineer</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">DataPulse Labs • Remote</p>
+            <p style="margin-top: 12px; font-weight: 700; color: var(--accent);">$130,000 - $160,000 / yr</p>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+          <div>
+            <span class="job-badge">Full-time</span>
+            <h3 style="margin: 8px 0 4px;">Technical Product Manager</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">CloudNet Systems • Austin, TX</p>
+            <p style="margin-top: 12px; font-weight: 700; color: var(--accent);">$110,000 - $135,000 / yr</p>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Apply Now</a>
+        </div>
+
+        <!-- PAGINATION -->
+        <!-- SYMMETRIC PAGINATION -->
+<div class="pagination-wrapper">
+  <button class="btn">Previous</button>
+  <button class="btn active">1</button>
+  <button class="btn">2</button>
+  <button class="btn">3</button>
+  <button class="btn">Next</button>
+</div>
+
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo"><span class="logo-mark"><img src="../images/logo.png" alt="JobHub" class="logo-img"></span> JobHub</a>
+            <p>Connecting talent with opportunity. Built exclusively to help candidates build meaningful careers.</p>
+          </div>
+          <div>
+            <h4>Job Seekers</h4>
+            <ul>
+              <li><a href="job-search.html">Find Jobs</a></li>
+              <li><a href="salary-guide.html">Salary Guide</a></li>
+              <li><a href="companies.html">Company Reviews</a></li>
+              <li><a href="subscription.html">Upgrade</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>About Us</h4>
+            <p style="font-size: 0.9rem; margin-bottom: 12px;">Learn more about our mission to help job finders worldwide.</p>
+            <a href="about.html" class="btn btn-outline btn-sm footer-link-btn">Read our story</a>
+          </div>
+          <div>
+            <h4>Contact Us</h4>
+            <p style="font-size: 0.9rem; margin-bottom: 12px;">Need help with your application? Reach out to support.</p>
+            <a href="contact.html" class="btn btn-outline btn-sm footer-link-btn">Get in touch</a>
+          </div>
+        </div>
+        <div class="footer-bottom">© 2026 JobHub. All Rights Reserved.</div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
