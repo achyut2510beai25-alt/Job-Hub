@@ -296,3 +296,103 @@ label:focus-visible {
   .container { padding: 0 32px; }
   .auth-card { padding: 44px 36px; }
 }
+/* JobHub auth additions — original theme and layout unchanged */
+.jobhub-password-wrap { position: relative; }
+.jobhub-password-wrap .form-input { padding-right: 52px; }
+.jobhub-eye { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); padding: 6px; border-radius: 6px; font-size: 18px; line-height: 1; }
+.jobhub-eye:focus-visible, .jobhub-refresh:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.jobhub-refresh { flex: 0 0 auto; align-self: center; padding: 8px; border-radius: 8px; color: var(--accent); background: var(--accent-soft); font-size: 24px; line-height: 1; }
+.jobhub-error { color: #b42318; font-size: 0.78rem; margin-top: 6px; }
+.jobhub-hint { color: var(--text-muted); font-size: 0.78rem; margin-top: 6px; }
+.jobhub-toast { position: fixed; right: 18px; top: 18px; z-index: 9999; max-width: min(360px, calc(100vw - 36px)); padding: 12px 16px; border-radius: 10px; color: white; font: 500 14px/1.4 'Segoe UI', sans-serif; box-shadow: 0 8px 24px rgba(0,0,0,.2); opacity: 0; transform: translateY(-8px); transition: opacity .2s, transform .2s; pointer-events: none; }
+.jobhub-toast.visible { opacity: 1; transform: translateY(0); }
+.auth-submit:disabled { opacity: .7; cursor: wait; }
+.captcha-visual { min-width: 0; }
+.captcha-visual span { white-space: nowrap; }
+@media (max-width: 420px) { .captcha-box { gap: 6px; } .captcha-visual { padding: 0 8px; gap: 2px; letter-spacing: 1px; font-size: 1rem; } }
+/* Hide browser's default password eye icon */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+/* Password wrapper */
+.jobhub-password-wrap {
+    position: relative;
+    width: 100%;
+}
+
+/* Password input */
+.jobhub-password-wrap input {
+    width: 100%;
+    padding-right: 50px;
+}
+
+/* Custom eye button */
+.jobhub-eye {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px;
+    z-index: 2;
+}
+/* CAPTCHA layout */
+.captcha-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.captcha-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 115px;
+    height: 46px;
+    padding: 0 12px;
+
+    font-family: monospace;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* CAPTCHA refresh button */
+.jobhub-captcha-refresh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--accent-soft, rgba(193, 68, 14, 0.08));
+    color: var(--accent, #C1440E);
+    font-size: 22px;
+}
+
+/* CAPTCHA input */
+.captcha-box input {
+    flex: 1 1 150px;
+    min-width: 0;
+    width: auto;
+}
+
+@media (max-width: 480px) {
+    .captcha-box input {
+        flex-basis: 100%;
+    }
+}

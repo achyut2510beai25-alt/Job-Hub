@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="../images/logo.png">
   <link rel="stylesheet" href="../CSS/home.css">
+  <script src="../JavaScript/auth.js" defer></script>
+<script src="../JavaScript/home.js" defer></script>
 </head>
 <body>
   <input type="checkbox" id="themeToggle" class="theme-toggle-checkbox">
@@ -45,7 +47,7 @@
 
     <section class="search-band">
       <div class="container">
-        <form class="home-search" action="job-search.html" method="GET">
+        <form class="home-search" action="find-jobs.html" method="GET">
           <label class="field">🔍 <input type="text" name="q" placeholder="Job title, keywords, or skills" required></label>
           <label class="field">📍 <input type="text" name="l" placeholder='City, state, or "Remote"'></label>
           <button type="submit" class="btn btn-primary">Search Jobs</button>
@@ -67,13 +69,13 @@
     <section class="role-section" id="role">
       <div class="container">
         <div class="role-grid">
-          <div class="card role-card">
+          <div class="card role-card" id="jobCard">
             <p class="role-label">New Job Seeker?</p>
             <h3>Create your candidate profile</h3>
             <p class="role-desc">Upload your resume, set job alerts, and apply to thousands of active openings with a single click.</p>
             <a href="signup.html" class="btn btn-primary btn-block">Sign Up Free</a>
           </div>
-          <div class="card role-card">
+          <div class="card role-card" id="profileCard">
             <p class="role-label">Returning Candidate</p>
             <h3>Access your portal</h3>
             <p class="role-desc">Log in to review submitted applications, view saved jobs, and check messages from hiring teams.</p>

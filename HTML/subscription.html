@@ -1,193 +1,380 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pricing Plans — JobHub</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../images/logo.png">
-  <link rel="stylesheet" href="../CSS/subscription.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans — JobHub</title>
+
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../CSS/subscription.css">
+
+    <script src="../JavaScript/auth.js" defer></script>
+    <script src="../JavaScript/subscription.js" defer></script>
 </head>
 <body>
-  <input type="checkbox" id="themeToggle" class="theme-toggle-checkbox">
-  
-  <!-- PAYMENT MODAL CONTROLLER CHECKBOX -->
-  <input type="checkbox" id="paymentModalToggle" class="modal-toggle-checkbox">
 
-  <div class="page-wrapper">
-    
-    <!-- HEADER NAVBAR -->
-    <nav class="site-nav">
-      <div class="container nav-container">
-        <a href="home.html" class="logo">
-          <span class="logo-mark"><img src="../images/logo.png" alt="JobHub" class="logo-img"></span>
-          <span class="logo-text">JobHub</span>
-        </a>
+    <input type="checkbox" id="themeToggle"
+           class="theme-toggle-checkbox">
 
-        <ul class="nav-links" id="navLinks">
-          <li><a href="home.html">Home</a></li>
-          <li><a href="find-jobs.html">Find Jobs</a></li>
-          <li><a href="company-reviews.html">Company Reviews</a></li>
-          <li><a href="salary-guide.html">Salary Guide</a></li>
-          <li><a href="subscription.html" class="active">Upgrade</a></li>
-        </ul>
+    <div class="page-wrapper">
 
-        <div class="nav-right">
-          <label for="themeToggle" class="icon-btn theme-label" aria-label="Toggle theme">
-            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8"/></svg>
-          </label>
+        <!-- NAVBAR -->
+        <nav class="site-nav">
+            <div class="container nav-container">
 
-          <div class="profile-wrap">
-            <input type="checkbox" id="profileToggle" class="profile-toggle-checkbox">
-            <label for="profileToggle" class="icon-btn profile-toggle" aria-label="Account menu">
-              <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.8"/></svg>
-            </label>
-            <div class="profile-menu">
-           
-              <a href="home.html" class="btn btn-primary btn-block btn-sm">Log Out</a>
+                <a href="home.html" class="logo">
+                    <span class="logo-mark">
+                        <img src="../images/logo.png"
+                             alt="JobHub" class="logo-img">
+                    </span>
+                    <span class="logo-text">JobHub</span>
+                </a>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="find-jobs.html">Find Jobs</a></li>
+                    <li><a href="company-reviews.html">Company Reviews</a></li>
+                    <li><a href="salary-guide.html">Salary Guide</a></li>
+                    <li>
+                        <a href="subscription.html" class="active">
+                            Upgrade
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav-right">
+
+                    <!-- THEME -->
+                    <label for="themeToggle"
+                           class="icon-btn theme-label"
+                           aria-label="Toggle theme">
+
+                        <svg class="icon-sun" width="20" height="20"
+                             viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="4.5"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"/>
+                            <path d="M12 2.5v2.4M12 19.1v2.4
+                                     M4.2 4.2l1.7 1.7
+                                     M18.1 18.1l1.7 1.7
+                                     M2.5 12h2.4M19.1 12h2.4
+                                     M4.2 19.8l1.7-1.7
+                                     M18.1 5.9l1.7-1.7"
+                                  stroke="currentColor"
+                                  stroke-width="1.8"
+                                  stroke-linecap="round"/>
+                        </svg>
+
+                        <svg class="icon-moon" width="20" height="20"
+                             viewBox="0 0 24 24" fill="none">
+                            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4
+                                     a8.5 8.5 0 1 0 10.5 10.5Z"
+                                  stroke="currentColor"
+                                  stroke-width="1.8"/>
+                        </svg>
+                    </label>
+
+                    <!-- PROFILE -->
+                    <div class="profile-wrap">
+                        <input type="checkbox" id="profileToggle"
+                               class="profile-toggle-checkbox">
+
+                        <label for="profileToggle"
+                               class="icon-btn profile-toggle"
+                               aria-label="Account menu">
+                            <svg width="21" height="21"
+                                 viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="8" r="4"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"/>
+                                <path d="M4 20c0-4 3.6-6 8-6
+                                         s8 2 8 6"
+                                      stroke="currentColor"
+                                      stroke-width="1.8"/>
+                            </svg>
+                        </label>
+
+                        <div class="profile-menu"></div>
+                    </div>
+
+                    <!-- MOBILE MENU -->
+                    <input type="checkbox" id="navToggle"
+                           class="nav-toggle-checkbox">
+
+                    <label for="navToggle" class="nav-toggle"
+                           aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+
+                </div>
             </div>
-          </div>
+        </nav>
 
-          <input type="checkbox" id="navToggle" class="nav-toggle-checkbox">
-          <label for="navToggle" class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
-        </div>
-      </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <header class="page-hero">
-      <div class="container">
-        <h1>Invest in Your Career Growth</h1>
-        <p>Unlock AI resume reviews, direct recruiter messaging, and priority job applications.</p>
-      </div>
-    </header>
-
-    <!-- PRICING CARDS -->
-    <main class="container" style="padding: 40px 0 70px;">
-      <div class="pricing-grid">
-        
-        <!-- Free Plan -->
-        <div class="pricing-card">
-          <span class="plan-badge">Free Tier</span>
-          <h3>Basic</h3>
-          <div class="plan-price">$0 <span>/ month</span></div>
-          <p class="plan-desc">Essential tools for casual job seekers searching open roles.</p>
-          <ul class="plan-features">
-            <li>✔ Apply to up to 10 jobs/month</li>
-            <li>✔ Basic salary insights</li>
-            <li>✔ Access public company reviews</li>
-            <li class="disabled">✖ AI Resume Match Score</li>
-            <li class="disabled">✖ Direct Recruiter Messaging</li>
-          </ul>
-          <a href="signup.html" class="btn btn-outline btn-block">Get Started</a>
-        </div>
-
-        <!-- Pro Plan (Triggers Payment Gateway) -->
-        <div class="pricing-card featured">
-          <span class="plan-badge featured-badge">Most Popular</span>
-          <h3>Pro Candidate</h3>
-          <div class="plan-price">$19 <span>/ month</span></div>
-          <p class="plan-desc">Accelerate your search with AI tools and featured application badges.</p>
-          <ul class="plan-features">
-            <li>✔ Unlimited job applications</li>
-            <li>✔ Priority badge on recruiter feeds</li>
-            <li>✔ Instant AI Resume Optimization</li>
-            <li>✔ Full salary benchmarks & data</li>
-            <li class="disabled">✖ Dedicated Career Coach</li>
-          </ul>
-          
-          <!-- Trigger Modal -->
-          <label for="paymentModalToggle" class="btn btn-primary btn-block text-center" style="cursor: pointer;">Upgrade to Pro</label>
-        </div>
-
-        <!-- Executive Plan (Triggers Payment Gateway) -->
-        <div class="pricing-card">
-          <span class="plan-badge">Accelerated</span>
-          <h3>Executive</h3>
-          <div class="plan-price">$49 <span>/ month</span></div>
-          <p class="plan-desc">Full placement support for senior roles and career transitions.</p>
-          <ul class="plan-features">
-            <li>✔ Everything in Pro Candidate</li>
-            <li>✔ Direct Recruiter messaging access</li>
-            <li>✔ 1-on-1 Monthly Resume Audit</li>
-            <li>✔ Early access to top-tier $150k+ roles</li>
-            <li>✔ Dedicated Career Strategist</li>
-          </ul>
-
-          <!-- Trigger Modal -->
-          <label for="paymentModalToggle" class="btn btn-outline btn-block text-center" style="cursor: pointer;">Get Executive</label>
-        </div>
-
-      </div>
-    </main>
-
-    <!-- PAYMENT GATEWAY MODAL -->
-    <div class="payment-modal-overlay">
-      <div class="payment-modal-card">
-        <label for="paymentModalToggle" class="close-modal-btn">&times;</label>
-        
-        <div class="payment-header">
-          <h3>Checkout</h3>
-          <p>Secure 256-Bit Encrypted Payment</p>
-        </div>
-
-        <form class="payment-form" action="#" onsubmit="alert('Payment Successful! Welcome to JobHub Pro.'); return false;">
-          <div class="form-group">
-            <label class="form-label">Cardholder Name</label>
-            <input type="text" class="form-input" placeholder="John Doe" required>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Card Number</label>
-            <input type="text" class="form-input" placeholder="4532 •••• •••• 8892" required maxlength="19">
-          </div>
-
-          <div class="form-row two-col" style="display: flex; gap: 12px;">
-            <div class="form-group" style="flex: 1;">
-              <label class="form-label">Expiry</label>
-              <input type="text" class="form-input" placeholder="MM/YY" required maxlength="5">
+        <!-- HERO -->
+        <header class="page-hero">
+            <div class="container">
+                <h1>Invest in Your Career Growth</h1>
+                <p>
+                    Choose the right plan to accelerate your career.
+                    Transparent pricing in Indian Rupees.
+                </p>
             </div>
-            <div class="form-group" style="flex: 1;">
-              <label class="form-label">CVC / CVV</label>
-              <input type="password" class="form-input" placeholder="123" required maxlength="4">
-            </div>
-          </div>
+        </header>
 
-          <button type="submit" class="btn btn-primary btn-block" style="margin-top: 10px;">Pay Now &amp; Activate Plan</button>
-        </form>
-      </div>
+        <main class="container" style="padding:40px 0 70px;">
+
+            <!-- BILLING TOGGLE -->
+            <section class="billing-controls">
+                <span>Choose Billing:</span>
+
+                <button type="button" id="monthlyBtn"
+                        class="billing-option selected">
+                    Monthly
+                </button>
+
+                <button type="button" id="yearlyBtn"
+                        class="billing-option">
+                    Yearly (Save 20%)
+                </button>
+            </section>
+
+            <!-- CURRENT PLAN -->
+            <section id="subscriptionStatus"
+                     class="subscription-status"
+                     aria-live="polite"></section>
+
+            <!-- PRICING CARDS -->
+            <div class="pricing-grid">
+
+                <!-- BASIC -->
+                <div class="pricing-card">
+                    <span class="plan-badge">Free Tier</span>
+                    <h3>Basic</h3>
+
+                    <div class="plan-price">
+                        <span class="amount" data-plan="basic">₹0</span>
+                        <span class="period">/ month</span>
+                    </div>
+
+                    <p class="plan-desc">
+                        Essential tools for casual job seekers
+                        searching open roles.
+                    </p>
+
+                    <ul class="plan-features">
+                        <li>✔ Apply to up to 10 jobs/month</li>
+                        <li>✔ Basic salary insights</li>
+                        <li>✔ Access public company reviews</li>
+                        <li class="disabled">✖ AI Resume Match Score</li>
+                        <li class="disabled">✖ Direct Recruiter Messaging</li>
+                    </ul>
+
+                    <button type="button" data-plan="basic"
+                            class="btn btn-outline btn-block">
+                        Choose Basic
+                    </button>
+                </div>
+
+                <!-- PRO -->
+                <div class="pricing-card featured">
+                    <span class="plan-badge featured-badge">
+                        Most Popular
+                    </span>
+
+                    <h3>Pro Candidate</h3>
+
+                    <div class="plan-price">
+                        <span class="amount" data-plan="pro">₹299</span>
+                        <span class="period">/ month</span>
+                    </div>
+
+                    <p class="plan-desc">
+                        Accelerate your job search with advanced
+                        career tools and featured applications.
+                    </p>
+
+                    <ul class="plan-features">
+                        <li>✔ Unlimited job applications</li>
+                        <li>✔ Priority badge on recruiter feeds</li>
+                        <li>✔ AI Resume Optimization (planned)</li>
+                        <li>✔ Full salary benchmarks</li>
+                        <li class="disabled">✖ Dedicated Career Coach</li>
+                    </ul>
+
+                    <button type="button" data-plan="pro"
+                            class="btn btn-primary btn-block">
+                        Upgrade to Pro
+                    </button>
+                </div>
+
+                <!-- EXECUTIVE -->
+                <div class="pricing-card">
+                    <span class="plan-badge">Accelerated</span>
+                    <h3>Executive</h3>
+
+                    <div class="plan-price">
+                        <span class="amount" data-plan="executive">₹799</span>
+                        <span class="period">/ month</span>
+                    </div>
+
+                    <p class="plan-desc">
+                        Advanced career support for senior roles
+                        and career transitions.
+                    </p>
+
+                    <ul class="plan-features">
+                        <li>✔ Everything in Pro Candidate</li>
+                        <li>✔ Recruiter messaging (planned)</li>
+                        <li>✔ Monthly Resume Audit (planned)</li>
+                        <li>✔ Access to ₹30 LPA+ role listings</li>
+                        <li>✔ Career Strategy Tools (planned)</li>
+                    </ul>
+
+                    <button type="button" data-plan="executive"
+                            class="btn btn-outline btn-block">
+                        Get Executive
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- PAYMENT HISTORY -->
+            <section class="history-section">
+                <h3>My Demo Payment History</h3>
+                <div id="paymentHistory" aria-live="polite"></div>
+            </section>
+
+        </main>
+
+        <!-- PAYMENT MODAL -->
+        <div id="checkoutOverlay"
+             class="payment-modal-overlay" hidden>
+
+            <div class="payment-modal-card"
+                 role="dialog"
+                 aria-modal="true"
+                 aria-labelledby="checkoutTitle">
+
+                <button type="button" id="closeCheckout"
+                        class="close-modal-btn"
+                        aria-label="Close checkout">
+                    &times;
+                </button>
+
+                <div class="payment-header">
+                    <h3 id="checkoutTitle">Demo Checkout</h3>
+                    <p>
+                        This is a demonstration.
+                        Payments are not automatically verified.
+                    </p>
+                </div>
+
+                <div class="checkout-summary">
+                    <strong id="checkoutPlan">Pro Candidate</strong>
+                    <strong id="checkoutAmount">₹299</strong>
+                </div>
+
+                <!-- YOUR OWN QR IMAGE -->
+                <div class="demo-qr">
+                    <img src="../images/payment.png"
+                         alt="UPI payment QR code"
+                         class="payment-qr-image">
+                </div>
+
+                <p class="demo-disclaimer">
+                    If this is a real UPI QR, scanning it may
+                    transfer real money. The button below only
+                    simulates payment and does not verify transfers.
+                </p>
+
+                <form id="demoPaymentForm" class="payment-form">
+                    <div class="form-group">
+                        <label for="demoUpi" class="form-label">
+                            Demo UPI ID (Optional)
+                        </label>
+
+                        <input type="text" id="demoUpi"
+                               class="form-input"
+                               placeholder="example@upi"
+                               autocomplete="off"
+                               maxlength="80">
+                    </div>
+
+                    <button type="submit"
+                            class="btn btn-primary btn-block">
+                        Simulate Payment
+                    </button>
+                </form>
+
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+
+                    <div class="footer-brand">
+                        <a href="home.html" class="logo">
+                            <span class="logo-mark">
+                                <img src="../images/logo.png"
+                                     alt="JobHub"
+                                     class="logo-img">
+                            </span>
+                            JobHub
+                        </a>
+
+                        <p>
+                            Connecting talent with opportunity.
+                            Helping candidates build meaningful careers.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4>Job Seekers</h4>
+                        <ul>
+                            <li><a href="find-jobs.html">Find Jobs</a></li>
+                            <li><a href="salary-guide.html">Salary Guide</a></li>
+                            <li><a href="company-reviews.html">Company Reviews</a></li>
+                            <li><a href="subscription.html">Upgrade</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>About Us</h4>
+                        <p>
+                            Learn more about our mission to help
+                            job seekers worldwide.
+                        </p>
+                        <a href="about.html"
+                           class="btn btn-outline btn-sm footer-link-btn">
+                            Read our story
+                        </a>
+                    </div>
+
+                    <div>
+                        <h4>Contact Us</h4>
+                        <p>
+                            Need help with your application?
+                            Reach out to support.
+                        </p>
+                        <a href="contact.html"
+                           class="btn btn-outline btn-sm footer-link-btn">
+                            Get in touch
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="footer-bottom">
+                    © 2026 JobHub. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+
     </div>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <a href="home.html" class="logo"><span class="logo-mark"><img src="../images/logo.png" alt="JobHub" class="logo-img"></span> JobHub</a>
-            <p>Connecting talent with opportunity. Built exclusively to help candidates build meaningful careers.</p>
-          </div>
-          <div>
-            <h4>Job Seekers</h4>
-            <ul>
-              <li><a href="job-search.html">Find Jobs</a></li>
-              <li><a href="salary-guide.html">Salary Guide</a></li>
-              <li><a href="companies.html">Company Reviews</a></li>
-              <li><a href="subscription.html">Upgrade</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>About Us</h4>
-            <p style="font-size: 0.9rem; margin-bottom: 12px;">Learn more about our mission to help job finders worldwide.</p>
-            <a href="about.html" class="btn btn-outline btn-sm footer-link-btn">Read our story</a>
-          </div>
-          <div>
-            <h4>Contact Us</h4>
-            <p style="font-size: 0.9rem; margin-bottom: 12px;">Need help with your application? Reach out to support.</p>
-            <a href="contact.html" class="btn btn-outline btn-sm footer-link-btn">Get in touch</a>
-          </div>
-        </div>
-        <div class="footer-bottom">© 2026 JobHub. All Rights Reserved.</div>
-      </div>
-    </footer>
-  </div>
 </body>
 </html>

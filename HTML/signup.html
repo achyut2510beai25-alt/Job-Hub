@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="../images/logo.png">
   <link rel="stylesheet" href="../CSS/signup.css">
+
+
+  <script src="../JavaScript/auth.js" defer></script>
+  <script src="../JavaScript/signup.js" defer></script>
+
 </head>
 <body>
   <input type="checkbox" id="themeToggle" class="theme-toggle-checkbox">
@@ -47,10 +52,21 @@
                 <input class="form-input" type="email" id="email" placeholder="john@example.com" required>
               </div>
 
-              <div class="form-group">
-                <label class="form-label" for="phone">Phone Number <span class="optional">(Optional)</span></label>
-                <input class="form-input" type="tel" id="phone" placeholder="+1 (555) 000-0000">
-              </div>
+             <div class="form-group">
+    <label class="form-label" for="phone">Phone Number (Optional)</label>
+
+    <input
+        class="form-input"
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Enter 10-digit mobile number"
+        maxlength="10"
+        inputmode="numeric"
+        pattern="[6-9][0-9]{9}"
+        
+    >
+</div>
 
               <div class="form-group">
                 <label class="form-label" for="status">Current Status</label>
