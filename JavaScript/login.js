@@ -153,12 +153,6 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
             loginSuccessful = true;
-
-            console.log(
-                "Login user:",
-                JobHubAuth.currentUser()
-            );
-
             JobHubAuth.toast(
                 `Login successful! Welcome back, ${user.firstName || user.name}!`
             );

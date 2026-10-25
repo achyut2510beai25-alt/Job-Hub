@@ -130,7 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             logout.addEventListener("click", () => {
                 if (auth) auth.logout();
-                window.location.href = "home.html";
             });
 
         } else {
@@ -436,8 +435,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
             // PROMISE WITH ASYNC/AWAIT
-            const result = await processDemoPayment();
-            console.log(result);
+            await processDemoPayment();
 
             const now = new Date();
             const expiry = new Date(now);

@@ -418,8 +418,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 const review = {
-                    id: crypto.randomUUID
-                        ? crypto.randomUUID()
+                    id: auth?.randomId
+                        ? auth.randomId()
                         : String(Date.now()),
                     userId: currentUser.id,
                     company,

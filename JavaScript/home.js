@@ -20,8 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Theme is restored and saved by auth.js
     const user = auth.currentUser();
 
-    console.log("JobHub current user:", user);
-
     if (!menu) {
         console.error("Profile menu missing in home.html");
         return;
